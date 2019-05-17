@@ -19,9 +19,15 @@ function App() {
     setRepositories(data);
   }, [])
 
+  // example of component willupdate
+  useEffect(() => {
+    const filtered = repositories.filter(repo => repo.favorite)
+    document.title = `You have ${filtered.length} favorites`
+  }, [repositories])
+
   function handleFavorite(id) {
     const newRepositories = repositories.map(repo => {
-      return repo.id === id ? { ...repo, favorite: true } : repo
+      return repo.id === id ? { ...repo, favorite: !repo.favorite } : repo
     })
     setRepositories(newRepositories);
   }
