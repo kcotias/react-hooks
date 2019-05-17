@@ -12,8 +12,11 @@ function App() {
   // second parameter should be an array of values that the function will watch, 
   //and everytime one of those values changes, that function of the first parameter will run. 
   // tips: if you just want the component didmount funcionality, just live the second parameter as an empty array.
-  useEffect(() => {
+  useEffect(async () => {
+    const response = await fetch('https://api.github.com/users/kcotias/repos');
+    const data = await response.json();
 
+    setRepositories(data);
   }, [])
 
   return (
