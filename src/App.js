@@ -5,6 +5,11 @@ function App() {
 
   return (
     <div className="App">
+      <ul>
+        {repositories.map(repo => (
+          <li key={repo.id}>{repo.name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
