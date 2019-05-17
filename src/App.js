@@ -32,6 +32,18 @@ function App() {
     setRepositories(newRepositories);
   }
 
+
+  const [location, setLocation] = useState({});
+
+  useEffect(() => {
+    navigator.geolocation.watchPosition(handlePositionReceived);
+  }, []);
+
+  function handlePositionReceived({ coords }) {
+    const { latitude, longitude } = coords;
+    setLocation({ latitude, longitude });
+  }
+
   return (
     <div className="App">
       <ul>
@@ -43,6 +55,12 @@ function App() {
           </li>
         ))}
       </ul>
+
+      <>
+        Latitude: {location.latitude}
+        <br />
+        Longitude: {location.longitude}
+      </>
     </div>
   );
 }
