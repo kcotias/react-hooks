@@ -19,11 +19,22 @@ function App() {
     setRepositories(data);
   }, [])
 
+  function handleFavorite(id) {
+    const newRepositories = repositories.map(repo => {
+      return repo.id === id ? { ...repo, favorite: true } : repo
+    })
+    setRepositories(newRepositories);
+  }
+
   return (
     <div className="App">
       <ul>
         {repositories.map(repo => (
-          <li key={repo.id}>{repo.name}</li>
+          <li key={repo.id}>
+            {repo.name}
+            {repo.favorite && <span>(Favorito)</span>}
+            <button onClick={() => handleFavorite(repo.id)}>Favoritar</button>
+          </li>
         ))}
       </ul>
     </div>
