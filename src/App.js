@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  // first parameter is the title os the state variable
+  // second parameter is the title of the function we will use to change its value
+  //  then we call useState([]) and inside of it we put the default value it will have
   const [repositories, setRepositories] = useState([]);
-
-  function handleRepository() {
-    setRepositories([...repositories, { id: 'novo', name: 'novo' }])
-  }
 
   return (
     <div className="App">
@@ -14,9 +13,6 @@ function App() {
           <li key={repo.id}>{repo.name}</li>
         ))}
       </ul>
-      <button onClick={handleRepository}>
-        Add repo
-      </button>
     </div>
   );
 }
