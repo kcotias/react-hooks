@@ -2,6 +2,8 @@
 
 This project is just a simple example of react hooks functions and how they work.
 
+As usual, i tried to make my commits work like explanations, so if you follow my commit history you may understand more easily how it works.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
