@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [repositories, setRepositories] = useState([]);
+
   return (
     <div className="App">
     </div>
