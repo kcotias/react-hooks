@@ -1,4 +1,9 @@
+
+
+This project is just a simple example of react hooks functions and how they work.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
