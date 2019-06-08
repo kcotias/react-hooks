@@ -6,5 +6,5 @@ As usual, i tried to make my commits work like explanations, so if you follow my
 
 ### How to run?
 
-Run npm install, them npm start on terminal.<br>
+Run `npm install`, them `npm start` on terminal.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
